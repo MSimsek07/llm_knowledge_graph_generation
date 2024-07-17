@@ -1,0 +1,16 @@
+fastapi
+pydantic
+py2neo
+python-dotenv
+langchain-community
+langchain-experimental
+langchain-openai
+markdown
+streamlit
+requests
+neo4j
+google-search-results
+opentelemetry-api
+opentelemetry-sdk
+opentelemetry-instrumentation-fastapi
+opentelemetry-exporter-jaeger
