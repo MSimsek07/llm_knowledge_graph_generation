@@ -1,0 +1,47 @@
+// Status code kontrolü
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// Response formatı kontrolü
+pm.test("Response is in JSON format", function () {
+    pm.response.to.be.json;
+});
+
+// Gerekli alanların varlığı kontrolü
+pm.test("Response has all required fields", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData).to.have.property('research_response');
+    pm.expect(jsonData).to.have.property('research_report');
+    pm.expect(jsonData).to.have.property('documents');
+    pm.expect(jsonData).to.have.property('graph_documents');
+});
+
+// Research response kontrolü
+pm.test("Research response is not empty", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.research_response).to.be.a('string').and.to.have.lengthOf.at.least(1);
+});
+
+// Research report kontrolü
+pm.test("Research report is not empty", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.research_report).to.be.a('string').and.to.have.lengthOf.at.least(1);
+});
+
+// Documents array kontrolü
+pm.test("Documents array is not empty", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.documents).to.be.an('array').and.to.have.lengthOf.at.least(1);
+});
+
+// Graph documents array kontrolü
+pm.test("Graph documents array is not empty", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.graph_documents).to.be.an('array').and.to.have.lengthOf.at.least(1);
+});
+
+// Response zamanı kontrolü
+pm.test("Response time is less than 60s", function () {
+    pm.expect(pm.response.responseTime).to.be.below(60000);
+});
