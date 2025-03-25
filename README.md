@@ -2,6 +2,28 @@
 
 This repository provides tools and scripts to generate knowledge graphs using Large Language Models (LLMs). It includes backend services, a frontend interface, testing scripts, and additional resources to facilitate the creation and visualization of knowledge graphs.
 
+Python: Used as the main programming language of the project.
+
+FastAPI: A Python web framework for building fast and modern web APIs.
+
+Pydantic: A Python library for data validation and settings management.
+
+Py2neo: A Python library for interacting with the Neo4j database.
+
+python-dotenv: Used to manage environment variables.
+
+LangChain: A library for performing chained operations with LLMs.
+
+Streamlit: A Python library for creating data applications.
+
+Requests: A Python library for making HTTP requests.
+
+Neo4j: Used as a graph database management system.
+
+OpenTelemetry: An open source monitoring system used to monitor application performance and behavior.
+
+Docker: Used for application containerization and deployment.
+
 ## Table of Contents
 
 - [Features](#features)
